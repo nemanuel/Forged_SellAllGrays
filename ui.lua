@@ -51,6 +51,8 @@ function addon.UpdateSellButtonVisibility()
         return
     end
 
+    MerchantRepairText:Hide()
+
     if addon.HasGrayQualityItems() then
         addon.sellButton:Show()
     else
