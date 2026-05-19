@@ -1,6 +1,6 @@
 # Sell All Grays
 
-`Sell All Grays` is a lightweight Turtle WoW addon that adds a one-click button to the merchant window for selling all gray (poor-quality) items in your bags.
+`Sell All Grays` is a lightweight addon for vanilla World of Warcraft 1.12.1 that adds a one-click button to the merchant window for selling all gray (poor-quality) items in your bags.
 
 ## Features
 
@@ -12,21 +12,24 @@
 
 ## Requirements
 
-- **Game:** Turtle WoW (Vanilla Client)
+- **Game:** World of Warcraft 1.12.1
 - **Interface:** `11200`
 
 ## Installation
 
 1. Download or clone this repository.
-2. Place this folder inside your WoW addons directory:
+2. Place this folder inside your vanilla World of Warcraft addons directory:
 
    ```
-   World of Warcraft/Interface/AddOns/TurtleSellAllGrays
+   World of Warcraft/Interface/AddOns/Forged_SellAllGrays
    ```
 
 3. Confirm the folder contains at least:
-   - `TurtleSellAllGrays.toc`
-   - `TurtleSellAllGrays.lua`
+   - `Forged_SellAllGrays.toc`
+   - `core.lua`
+   - `item_utils.lua`
+   - `money.lua`
+   - `ui.lua`
 4. Start the game and enable the addon from the AddOns list at character select.
 
 ## Usage
@@ -54,6 +57,7 @@
 - **Button does not appear:** Make sure you are at a merchant and have at least one gray item in your bags.
 - **Addon not listed in-game:** Verify folder name/path under `Interface/AddOns` and that `.toc`/`.lua` files are directly inside the addon folder.
 - **No money message shown:** No coin gain was detected (for example, no gray items were sold).
+- **Lua errors on startup or at merchants:** Confirm you are running the addon on a vanilla 1.12.1 client with interface `11200`.
 
 ## License
 

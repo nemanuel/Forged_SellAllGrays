@@ -1,19 +1,17 @@
-TurtleSellAllGrays = TurtleSellAllGrays or {}
+ForgedSellAllGrays = ForgedSellAllGrays or {}
 -- Only create the tooltip once and reuse it
 local scanTooltip = nil
+
 local function IsItemSoulbound(bag, slot)
-    if not CreateFrame or not UIParent then
-        return false
-    end
     if not scanTooltip then
-        scanTooltip = CreateFrame("GameTooltip", "TurtleSellAllGrays_ScanTooltip", nil, "GameTooltipTemplate")
+        scanTooltip = CreateFrame("GameTooltip", "ForgedSellAllGrays_ScanTooltip", nil, "GameTooltipTemplate")
     end
     scanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
     scanTooltip:ClearLines()
     scanTooltip:SetBagItem(bag, slot)
     local tooltipName = scanTooltip:GetName()
     for i = 2, scanTooltip:NumLines() do -- skip first line (item name)
-        local textObj = _G[tooltipName .. "TextLeft" .. i]
+        local textObj = getglobal(tooltipName .. "TextLeft" .. i)
         local tooltipLine = nil
         if type(textObj) == "table" and type(textObj.GetText) == "function" then
             tooltipLine = textObj:GetText()
@@ -28,7 +26,7 @@ local function IsItemSoulbound(bag, slot)
     end
     return false
 end
-local addon = TurtleSellAllGrays
+local addon = ForgedSellAllGrays
 
 function addon.GetItemQualityFromLink(itemLink)
     if not itemLink then

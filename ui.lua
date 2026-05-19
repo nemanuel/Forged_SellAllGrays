@@ -1,11 +1,11 @@
-local addon = TurtleSellAllGrays
+local addon = ForgedSellAllGrays
 
 function addon.EnsureSellButton()
     if addon.sellButton then
         return addon.sellButton
     end
 
-    local button = CreateFrame("Button", "TurtleSellAllGrays_SellButton", MerchantFrame, "ItemButtonTemplate")
+    local button = CreateFrame("Button", "ForgedSellAllGrays_SellButton", MerchantFrame, "ItemButtonTemplate")
     button:SetWidth(36)
     button:SetHeight(36)
 

@@ -1,5 +1,5 @@
-TurtleSellAllGrays = TurtleSellAllGrays or {}
-local addon = TurtleSellAllGrays
+ForgedSellAllGrays = ForgedSellAllGrays or {}
+local addon = ForgedSellAllGrays
 
 addon.copperAtSellStart = addon.copperAtSellStart or 0
 addon.selling = addon.selling or false

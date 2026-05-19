@@ -1,4 +1,4 @@
-local addon = TurtleSellAllGrays
+local addon = ForgedSellAllGrays
 
 function addon.FormatMoneyText(copper)
     local g = floor(copper / 10000)
@@ -19,7 +19,7 @@ end
 
 function addon.PrintSellResult(copperGained)
     if copperGained > 0 then
-        print("|cffffff00Sold all poor-quality items.")
-        print("|cffffff00Received " .. addon.FormatMoneyText(copperGained) .. ".")
+        DEFAULT_CHAT_FRAME:AddMessage("|cffffff00Sold all poor-quality items.")
+        DEFAULT_CHAT_FRAME:AddMessage("|cffffff00Received " .. addon.FormatMoneyText(copperGained) .. ".")
     end
 end
